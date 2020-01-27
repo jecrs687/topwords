@@ -30,7 +30,7 @@ export default class App extends React.Component {
         animationType='slide'
         hardwareAccelerated
         animated={true}
-        presentationStyle='pageSheet'
+        presentationStyle='formSheet'
         onDismiss={()=>{this.setState({isVisible:false})}}
         onRequestClose={()=>{this.setState({isVisible:false})}}
         >
@@ -47,9 +47,9 @@ export default class App extends React.Component {
           </View>
         </Modal>
       <Text style={[styles.text,{fontSize:30}]}>
-      {this.state.porcentagem.toFixed(2)}%/{this.state.totalPorcent.toFixed(2)}
+      {this.state.porcentagem.toFixed(2)}%
       </Text>
-      <TouchableOpacity style={styles.box} onPress={()=>{ this.setState({isVisible:true})}}>        
+      <TouchableOpacity style={styles.box} onPress={()=>{ this.setState({isVisible:!this.state.isVisible})}}>        
           <Text style={styles.porcentagem}>analized words:  {tamanho}</Text>
           <View style={{marginTop:40, margin:10,}}>
           <Text style={styles.text}>{palavras[this.state.index].word}</Text>
