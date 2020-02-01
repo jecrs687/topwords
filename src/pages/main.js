@@ -2,15 +2,18 @@ import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity,Modal, ScrollView } from 'react-native';
 import dictionary from '../data/dictionary.json';
 const lista = require('../data/English.json')
+import { withTheme } from 'react-native-paper';
+
 var {palavras,tamanho}= lista
-export default class Main extends React.Component {
+class Main extends React.Component {
   constructor(){
     super()
     this.state={
       index:0,
       porcentagem:0.0001,
       isVisible:false,
-      totalPorcent:0.00
+      totalPorcent:0.00,
+      
     }
   }
   componentDidMount(){
@@ -23,7 +26,7 @@ export default class Main extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container,{backgroundColor:this.props.theme.colors}]}>
         <Modal
         visible={this.state.isVisible}
         animationType='slide'
@@ -177,3 +180,6 @@ const styles = StyleSheet.create({
     height:40,
   },
 });
+
+
+export default withTheme(Main)
