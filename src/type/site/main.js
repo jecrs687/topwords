@@ -21,8 +21,7 @@ export default function main(){
 }
 
                 </div>
-                <div className="smartphone_button">
-                </div>
+                <div className="smartphone_button"/>
                 </div>
             </div>
 
