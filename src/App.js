@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Mobile from './type/mobile/main'
+import Script from './type/script/main'
+import Desktop from './type/desktop/main'
+import Site from './type/site/main'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const info = require('./infor.json')
+function main (){
+        switch(info.type){
+            case 'mobile':
+                return <Mobile/>;
+            case 'desktop':
+                return <Desktop/>;
+            case 'script':
+                return <Script/>;
+            case 'site':
+                return <Site/>;
+            default:
+                return <Script/>
+        }
 }
-
-export default App;
+export default function App(){
+    
+    return(
+        <div className='App'>
+            {main()}
+        </div>
+    )
+}
