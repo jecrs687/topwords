@@ -40,7 +40,7 @@
     align-self: center;
     height: 8vmin;
     width: 8vmin;
-    margin: 10px;
+    margin-top: 10px;
     z-index: 2;
     border-radius: 5vmin;
     background-color: white;
@@ -155,7 +155,7 @@ background: none;
     }
     
     .Mobile .header .smartphone .screen{
-        height: 70vmax;
+        height: 58.5vmax;
         width: 35vmax;
     }
     .Mobile .header .smartphone .smartphone_button{
@@ -163,9 +163,6 @@ background: none;
         height: 8vmax;
         width: 8vmax;
         border-radius: 8vmax;
-    }
-    .Mobile .header .smartphone .smartphone_button:hover{
-        background-color: #00FFFF;
     }
     
     .Mobile .header .screen h1{
