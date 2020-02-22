@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d027477306dab72d2fe023fac5bebd7a",
+    "revision": "c06e81ce75a63e975a9610e383828878",
     "url": "/topwords/index.html"
   },
   {
-    "revision": "faa4283cfa86ba71f192",
-    "url": "/topwords/static/css/main.bed11b85.chunk.css"
+    "revision": "315faca74616a321ee3e",
+    "url": "/topwords/static/css/main.3c281a62.chunk.css"
   },
   {
     "revision": "70f69047be4d6f49b288",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/topwords/static/js/2.b0589055.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "faa4283cfa86ba71f192",
+    "revision": "315faca74616a321ee3e",
     "url": "/topwords/static/js/main.9896251e.chunk.js"
   },
   {
