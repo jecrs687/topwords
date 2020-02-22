@@ -1,0 +1,207 @@
+.Mobile {
+    display: flex;
+    flex-direction: column;
+  }
+.Mobile  .header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    height: 100vh;
+}
+
+
+.Mobile .header .smartphone{
+    display: flex;
+    flex-direction: column;
+    height: 80vmin;
+    width: 40vmin;
+    border-radius: 2vmin;
+    z-index: 2;
+    padding: 10px;
+}
+
+.Mobile .header .smartphone .screen{
+    display: flex;
+    height: 70vmin;
+    width: 40vmin;
+    z-index: 2;
+    border-radius: 1vmin;
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer;
+}
+.Mobile .header .smartphone .screen h1:hover{
+    color: #687687;
+}
+.Mobile .header .smartphone .smartphone_button{
+    display: flex;
+    align-self: center;
+    height: 8vmin;
+    width: 8vmin;
+    margin: 10px;
+    z-index: 2;
+    border-radius: 5vmin;
+    background-color: white;
+    align-items: center; 
+    justify-content: center; 
+}
+.Mobile .header .smartphone .smartphone_button:hover{
+    box-sizing: border-box;
+    border: 2px #ddd  ;
+    border-style: solid;
+}
+
+.Mobile .header .screen{
+    display: flex;
+    flex-direction: column;
+    color:white;
+    font-size:2vmin;
+}
+
+.Mobile .body{
+background: none;
+}
+
+.Mobile .footer{
+    height: max-content;
+    padding: 10px;
+    border:#555 0.2px;
+    border-style: solid none none none;
+    text-align: center;
+    }
+ a{
+    text-decoration: none;
+    color:white
+    }
+
+
+/* Animations*/
+/* 
+
+
+
+
+
+*/
+
+.Mobile .header:not(.smartphone)  div:nth-child(1):not(.screen){
+    position:absolute;    
+    height: 80vmin;
+    width: 40vmin;
+    border-radius: 2vmin;
+    z-index: 1;
+    animation: box-back 4s infinite linear;
+}
+.Mobile .header:not(.smartphone)  div:nth-child(2):not(.smartphone_button){
+    position:absolute;    
+    height: 80vmin;
+    width: 40vmin;
+    border-radius: 2vmin;
+    z-index: 1;
+    animation: box-back 4s 1s infinite linear;
+}
+.Mobile .header:not(.smartphone)  div:nth-child(3):not(.screen){
+    position:absolute;    
+    height: 80vmin;
+    width: 40vmin;
+    border-radius: 2vmin;
+    z-index: 1;
+    animation: box-back 4s 2s infinite linear;
+}
+.Mobile .header:not(.smartphone)  div:nth-child(4):not(.screen){
+    position:absolute;    
+    height: 80vmin;
+    width: 40vmin;
+    border-radius: 2vmin;
+    z-index: 1;
+    animation: box-back 4s 3s infinite linear;
+}
+@keyframes box-back{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.4,1.2);
+    }
+
+}
+/* 
+
+
+
+
+
+*/
+
+/* adaptações para telas de celular */
+@media screen and (max-width:500px){
+    .Mobile {
+        display: flex;
+        flex-direction: column;
+      }
+    .Mobile  .header{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .Mobile .header .smartphone{
+        height: 70vmax;
+        width: 35vmax;
+        border-radius: 2vmax;
+    }
+    
+    .Mobile .header .smartphone .screen{
+        height: 70vmax;
+        width: 35vmax;
+    }
+    .Mobile .header .smartphone .smartphone_button{
+        display: flex;
+        height: 8vmax;
+        width: 8vmax;
+        border-radius: 8vmax;
+    }
+    .Mobile .header .smartphone .smartphone_button:hover{
+        background-color: #00FFFF;
+    }
+    
+    .Mobile .header .screen h1{
+        color:white;
+        font-size:4vmax;
+    }
+    
+    
+    
+    /* Animations*/
+    /* 
+    
+    
+    
+    
+    
+    */
+    
+    .Mobile .header:not(.smartphone)  div:nth-child(1):not(.screen){
+        height: 70vmax;
+        width: 35vmax;
+        border-radius: 2vmax;
+        }
+    .Mobile .header:not(.smartphone)  div:nth-child(2):not(.smartphone_button){
+        height: 70vmax;
+        width: 35vmax;
+        border-radius: 2vmax;
+    }
+    .Mobile .header:not(.smartphone)  div:nth-child(3):not(.screen){
+        height: 70vmax;
+        width: 35vmax;
+        border-radius: 2vmax;
+    }
+    .Mobile .header:not(.smartphone)  div:nth-child(4):not(.screen){
+        height: 70vmax;
+        width: 35vmax;
+        border-radius: 2vmax;
+    }
+}
